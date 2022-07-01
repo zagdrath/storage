@@ -64,6 +64,10 @@ Copy-Item "C:\RemoteInstall\Temp\syslinux-config\x86\pxelinux.cfg\default" -Dest
 Copy-Item "C:\RemoteInstall\Temp\syslinux-config\x64\shredos-2021.08.2_21_x86-64_0.32.023_20220126.iso" -Destination "C:\RemoteInstall\Boot\x64" | Out-Null
 Copy-Item "C:\RemoteInstall\Temp\syslinux-config\x86\shredos-2021.08.2_21_i586_0.32.023_20220126.iso" -Destination "C:\RemoteInstall\Boot\x86" | Out-Null
 
+# Cleanup temporary directories and files
+
+Remove-Item "C:\RemoteInstall\Temp" -Recurse
+
 Write-Output "Installation & Configuration of Syslinux Complete"
 Write-Output "`n"
 Read-Host -Prompt "Press Enter to Exit"
