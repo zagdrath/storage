@@ -66,7 +66,7 @@ Copy-Item "C:\RemoteInstall\Temp\syslinux-config\x86\shredos-2021.08.2_21_i586_0
 
 # Cleanup temporary directories and files
 
-Remove-Item "C:\RemoteInstall\Temp" -Recurse
+Remove-Item "C:\RemoteInstall\Temp" -Recurse | Out-Null
 
 Write-Output "Installation & Configuration of Syslinux Complete"
 Write-Output "`n"
